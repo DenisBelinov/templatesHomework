@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Source.h"
 template <typename T>
 void printArr(T* collection, int size)
 {
