@@ -246,3 +246,4 @@ int main()
 	//std::cout << accumulates(strings, strings_len) << std::endl; // "batmansupermanmickey mousespindermanuti bachvarov"
 	//problem : std::string sum = 0 in accumulates causes pointer problems
 	return 0;
+}
