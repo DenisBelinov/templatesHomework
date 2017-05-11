@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 template <typename T>
 void printArr(T* collection, int size)
 {
@@ -207,5 +208,41 @@ int main()
 	//int* skipSix = skip(intArr, 10, 6);
 	//printArr(skipSix, 4);
 	//delete[] skipSix;
+
+	//------------- Tests from the task -------------
+	int numbers[] = { 0, 1, 2, 3, 4, 4, 5, 6, 7 };
+	std::string strings[] = { "batman", "superman", "mickey mouse", "spinderman", "uti bachvarov" };
+	int zeros[] = { 0, 0, 0, 0, 0 };
+
+	int numbers_len = 9,
+	strings_len = 5,
+	zeros_len = 5;
+
+	//--- Passed tests ---
+	//std::cout << mode(numbers, numbers_len) << std::endl; // 4 - works
+	//std::cout << average(numbers, numbers_len) << std::endl; // 3 - works
+	//std::cout << accumulates(numbers, numbers_len) << std::endl; // 32 - works
+	//std::cout << all(zeros, zeros_len) << std::endl; // false - works
+	//std::cout << all(numbers, numbers_len) << std::endl; // false - works
+	//std::cout << all(&numbers[1], numbers_len - 1) << std::endl; // true - works
+	//std::cout << any(zeros, zeros_len) << std::endl; // false - works
+	//std::cout << any(numbers, numbers_len) << std::endl; // true - works
+	//std::cout << max(numbers, numbers_len) << std::endl; // 7 - works
+	//std::cout << min(numbers, numbers_len) << std::endl; // 0 - works
+	//std::string* reversed = reverse(strings, strings_len); // reversed now contains { "uti bachvarov", "spinderman",  "mickey mouse", "superman", "batman"};
+	//std::string* taken = take(strings, strings_len, 2); // taken now contains { "batman", "superman" }
+	//std::string* skipped = skip(strings, strings_len, 2); // skipped  now contains { "mickey mouse", "spinderman", "uti bachvarov" }
+	//printArr(reversed, strings_len);
+	//printArr(taken, 2);
+	//printArr(skipped, 3);
+	//delete[] reversed;
+	//delete[] skipped;
+	//delete[] taken;
+
+	//--- Not passed ---
+	//std::cout << median(strings, strings_len); // mickey mouse
+	//problem : median tries to devide a string with / 
+
+	//std::cout << accumulates(strings, strings_len) << std::endl; // "batmansupermanmickey mousespindermanuti bachvarov"
+	//problem : std::string sum = 0 in accumulates causes pointer problems
 	return 0;
-}
